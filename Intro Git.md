@@ -408,3 +408,195 @@ What do the following commands do
 
 <https://gitexercises.fracz.com/>
 
+---
+# Branches
+---
+
+
+* "Master" is the standard branch, it is a naming convention.
+* You can view a branch as a bookmark for commits.
+As we add commits, the active branch points to the new commit
+
+
+![](assets/img/branches.png)
+
+
+---
+
+### Branches in the terminal
+
+- Branches are pointers to commits
+```
+git show master
+``` 
+shows the commit to which the master refers
+```
+git branch
+``` 
+shows the branches in your project with ` * ` the current branch
+
+---
+### Create a new branch
+
+```
+git branch newBranch
+``` 
+create a branch" newBranch "
+- Branches refer back to the current active commit
+
+```
+git checkout branchName
+```
+puts your working directory on that branch
+
+<http://git-school.github.io/visualizing-git/>
+
+---
+### Pull means = fetch + merge
+
+- Pull first gets the commits and hits them up locally.
+- Merges them and places them together in the staging and creates a new commit with two parents.
+- Merging updates the active branch to point of the new merge commit
+- You see the new commits reflected in your local project when you execute "git log".
+
+---
+
+### Exercise
+
+1. Create a repository on your desktop called 'planets' with a
+readme.md and commit it.
+2. Choose a Wikipedia page about a planet of your choice.
+3. Copy the first paragraph over the planet, paste it in your
+readme.md and commit it.
+4. Create a new branch (`git branch <branchname>`) and switch to it (`git
+<branchname> checkout).
+
+---
+
+5. Add a Wikipedia entry about another planet
+in the readme.
+6. Save, then commit, then exit.
+7. Does the file show your first planet? Or the second?
+8. What happens if you go back to the master branch?
+---
+# Working in a team
+
+---
+
+## Give others access to your repository
+
+* Right click on **Settings**
+* In the menu on the left, click on **Collaborators**
+* Add the usernames of those who should have access
+
+---
+
+## Setting up a project on GitHub
+
+* One person does the following:
+    * Create a new repository
+    * Option to create README + `.gitignore`
+    * Add team members
+* Everyone does
+    * `git clone https://github.com/USER/PROJECT.git`
+
+---
+
+## Workflow: working in a team
+
+* Get the latest revision: `git pull origin master`
+* Make changes: `git add`,` git commit`
+* To central repository: `git push origin master`
+* `-u` is short for` --set-upstream '
+
+
+---
+## Exercise
+
+- Add people to your repository
+- Add files to each other's repo
+- What goes wrong and how do we solve it?
+
+# Teamwork
+
+---
+
+## Trunk-based development
+
+- No branches on central repo!
+- Applied with Continuous Integration / Delivery / Deployment
+- Feature flags
+
+---
+
+### Feature branches
+
+- Software with discrete releases
+- Master is always "clean"
+- More complex!
+- Possible bottlenecks
+
+
+![Image](assets/img/feature.png)
+---
+### Main branches
+* master: product-worthy
+* develop: latest changes for the next release
+
+---
+### Supporting branches
+
+* feature
+* branches off from develop
+* contain new features of the software
+````git checkout -b myfeature develop`
+
+```
+git checkout develop
+Switched to 'develop' branch
+git merge --no-ff myfeature
+Updating ea1b82a..05e9557
+(Summary of changes)
+git branch -d myfeature
+Deleted branch myfeature (was 05e9557).
+git push origin developer
+```
+![Image](assets/img/noff.png)
+
+### --no-ff
+
+---
+
+### Release and hotfix
+
+release
+* branches off from develop or master
+* preparation for new production release
+* `git checkout -b release-1.2 developer`
+
+
+---
+
+```
+git checkout master
+Switched to branch 'master'
+git merge --no-ff release-1.2
+Merge made by recursive.
+(Summary of changes)
+git tag -a 1.2
+git checkout develop
+Switched to 'develop' branch
+git merge --no-ff release-1.2
+Merge made by recursive.
+(Summary of changes)
+git branch -d release-1.2
+```
+
+---
+
+### Pull requests
+
+- For employees who do not have write access
+- More complex to set up
+- Always commit on the topic branch
+- Synchronize with "upstream"
