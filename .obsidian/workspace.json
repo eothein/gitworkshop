@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "5c7cf2a57cbb84e6",
+    "type": "split",
+    "children": [
+      {
+        "id": "fb6e64281284a04e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "08a864aac3dce1bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Intro Git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "50bac40801c7a933",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e36e382817cbcd3f",
+            "type": "leaf",
+            "state": {
+              "type": "reveal-preview-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6fb10f25a96d9d38",
+    "type": "split",
+    "children": [
+      {
+        "id": "846c49cebfa68bb7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a43808cdedfcb38",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a722f40f6121f5aa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#git",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "126498897fe1ba4f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f2e759e7894d9dd1",
+    "type": "split",
+    "children": [
+      {
+        "id": "89ed2c216ff3594b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b4fb1e8a597a9b81",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Intro Git.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a39af7e7b64cf83c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Intro Git.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4aba43b437f3e347",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e28903559a6b658e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Intro Git.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "a722f40f6121f5aa",
+  "lastOpenFiles": [
+    "assets/src/gettingstarted/output.txt.md",
+    "Intro Git.md"
+  ]
+}
